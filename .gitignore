@@ -34,3 +34,5 @@ frontend/dist/
 
 # Archivos privados de Django
 backend/staticfiles/
+
+backend/config/settings_local_backup.py
