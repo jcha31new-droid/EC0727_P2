@@ -1,0 +1,1051 @@
+/* CONTENEDOR PRINCIPAL */
+.automarket {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFFFFF;
+  color: #171717;
+}
+
+/* ENCABEZADO */
+.header {
+  width: 100%;
+  min-height: 80px;
+  background: #171717;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.logo span {
+  color: #D71920;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #D71920;
+}
+
+/* BOTONES */
+.btn-primary {
+  background: #D71920;
+  color: #FFFFFF;
+  border: none;
+  padding: 13px 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #A81016;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    padding: 18px 5%;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* SECCIÓN PRINCIPAL HERO */
+.hero-section {
+  width: 100%;
+  min-height: 560px;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url('/hero-automarket.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  padding: 60px 7%;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: #FFFFFF;
+}
+
+.hero-content h1 {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+  color: #D71920;
+}
+
+.hero-line {
+  width: 130px;
+  height: 5px;
+  background: #D71920;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: clamp(17px, 2vw, 23px);
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+}
+
+.hero-content .btn-primary {
+  display: inline-block;
+  padding: 16px 30px;
+  font-size: 16px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 480px;
+    padding: 45px 6%;
+    background-position: 40% center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    max-width: 300px;
+  }
+
+  .hero-content .btn-primary {
+    padding: 14px 22px;
+    font-size: 14px;
+  }
+}
+
+/* CATÁLOGO */
+.catalogo-section {
+  padding: 65px 7%;
+  background: #FFFFFF;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #171717;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: #666666;
+  font-size: 16px;
+}
+
+.vehiculos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vehiculo-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.vehiculo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+}
+
+.vehiculo-imagen {
+  width: 100%;
+  height: 210px;
+  background: #F1F1F1;
+}
+
+.vehiculo-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vehiculo-info {
+  padding: 22px;
+}
+
+.vehiculo-categoria {
+  display: inline-block;
+  color: #D71920;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.vehiculo-info h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vehiculo-precio {
+  color: #D71920;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.vehiculo-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 1px solid #E5E5E5;
+  font-size: 14px;
+  color: #555555;
+}
+
+.vehiculo-info .btn-primary {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.catalogo-mensaje {
+  text-align: center;
+  padding: 30px 10px;
+  color: #666666;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .vehiculos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+  .catalogo-section {
+    padding: 45px 5%;
+  }
+
+  .vehiculos-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+
+/* FICHA INDIVIDUAL DEL VEHÍCULO */
+.detalle-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px 5%;
+}
+
+.btn-regresar {
+  background: transparent;
+  border: 1px solid #D71920;
+  color: #D71920;
+  padding: 11px 18px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.btn-regresar:hover {
+  background: #D71920;
+  color: #FFFFFF;
+}
+
+.detalle-vehiculo {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.detalle-imagen {
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #F1F1F1;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.detalle-info {
+  padding: 20px 0;
+}
+
+.detalle-info h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #171717;
+  margin: 12px 0;
+}
+
+.detalle-info .vehiculo-precio {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.detalle-datos {
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  padding: 20px 0;
+  margin-bottom: 25px;
+}
+
+.detalle-datos p {
+  color: #555555;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.detalle-datos p:last-child {
+  margin-bottom: 0;
+}
+
+.detalle-info .btn-primary {
+  width: 100%;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .detalle-vehiculo {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .detalle-imagen {
+    height: 350px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+  .detalle-section {
+    padding: 25px 5%;
+  }
+
+  .detalle-imagen {
+    height: 250px;
+  }
+
+  .detalle-info h1 {
+    font-size: 27px;
+  }
+
+  .detalle-info .vehiculo-precio {
+    font-size: 26px;
+  }
+}
+
+
+/* FORMULARIO DE SOLICITUD */
+
+.formulario-solicitud {
+  max-width: 750px;
+  margin: 55px auto 20px;
+  padding: 35px;
+  background: #F7F7F7;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.formulario-solicitud h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #171717;
+  margin-bottom: 12px;
+}
+
+.formulario-solicitud > p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.formulario-solicitud form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-solicitud form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formulario-solicitud label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.formulario-solicitud input,
+.formulario-solicitud textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #171717;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.formulario-solicitud input:focus,
+.formulario-solicitud textarea:focus {
+  border-color: #D71920;
+}
+
+.formulario-solicitud textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.formulario-solicitud .btn-primary {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.mensaje-solicitud {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.confirmacion-solicitud {
+  margin-top: 20px;
+  padding: 18px;
+  background: #FFFFFF;
+  border-left: 4px solid #D71920;
+  border-radius: 4px;
+}
+
+.confirmacion-solicitud p {
+  margin: 7px 0;
+  color: #444444;
+  font-size: 14px;
+}
+
+/* ADAPTACIÓN DEL FORMULARIO PARA CELULARES */
+
+@media (max-width: 600px) {
+  .formulario-solicitud {
+    margin-top: 35px;
+    padding: 22px 18px;
+  }
+
+  .formulario-solicitud h2 {
+    font-size: 22px;
+  }
+}
+
+/* SECCIÓN NOSOTROS */
+.nosotros-section {
+  padding: 80px 8%;
+  background: #F1F1F1;
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 45px auto 0;
+}
+
+.nosotros-card {
+  background: #FFFFFF;
+  padding: 35px 28px;
+  border-radius: 8px;
+  border-bottom: 4px solid #D71920;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.nosotros-icon {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.nosotros-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #171717;
+  margin-bottom: 15px;
+}
+
+.nosotros-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 900px) {
+  .nosotros-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .nosotros-section {
+    padding: 55px 6%;
+  }
+
+  .nosotros-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .nosotros-card {
+    padding: 28px 22px;
+  }
+}
+
+/* SECCIÓN CONTACTO */
+.contacto-section {
+  padding: 80px 8%;
+  background: #FFFFFF;
+}
+
+.contacto-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  max-width: 1150px;
+  margin: 45px auto;
+}
+
+.contacto-informacion,
+.contacto-formulario {
+  padding: 30px;
+  background: #F7F7F7;
+  border-radius: 8px;
+  border: 1px solid #E5E5E5;
+}
+
+.contacto-informacion h3,
+.contacto-formulario h3,
+.contacto-mapa h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #171717;
+  margin-bottom: 25px;
+}
+
+.contacto-dato {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.contacto-dato > span {
+  font-size: 24px;
+  min-width: 30px;
+}
+
+.contacto-dato strong {
+  font-size: 15px;
+  color: #171717;
+}
+
+.contacto-dato p {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.5;
+  margin: 5px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.contacto-horarios {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #DDDDDD;
+}
+
+.contacto-horarios h3 {
+  margin-bottom: 18px;
+}
+
+.contacto-horarios p {
+  font-size: 14px;
+  color: #555555;
+  margin: 10px 0;
+}
+
+.contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contacto-formulario form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contacto-formulario label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #171717;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+  border-color: #D71920;
+}
+
+.contacto-formulario textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contacto-formulario .btn-primary {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.contacto-mapa {
+  max-width: 1150px;
+  margin: 55px auto 0;
+}
+
+.contacto-mapa h3 {
+  margin-bottom: 20px;
+}
+
+.contacto-mapa iframe {
+  display: block;
+  border-radius: 8px;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 800px) {
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacto-section {
+    padding: 55px 6%;
+  }
+
+  .contacto-informacion,
+  .contacto-formulario {
+    padding: 23px 18px;
+  }
+
+  .contacto-mapa {
+    margin-top: 40px;
+  }
+
+  .contacto-mapa iframe {
+    height: 280px;
+  }
+}
+
+/* PIE DE PÁGINA */
+.footer {
+  background: #171717;
+  color: #FFFFFF;
+  padding: 55px 8% 0;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 45px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+}
+
+.footer-logo span {
+  color: #D71920;
+}
+
+.footer-identidad p {
+  max-width: 330px;
+  color: #BBBBBB;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.footer-contacto p {
+  color: #BBBBBB;
+  font-size: 14px;
+  margin: 12px 0;
+  line-height: 1.5;
+}
+
+.footer-enlaces {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-enlaces a {
+  color: #BBBBBB;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-enlaces a:hover,
+.footer-admin:hover {
+  color: #D71920;
+}
+
+.footer-inferior {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 0;
+  border-top: 1px solid #444444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-inferior p {
+  color: #999999;
+  font-size: 13px;
+  margin: 0;
+}
+
+.footer-admin {
+  color: #BBBBBB;
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 800px) {
+  .footer-contenido {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .footer-identidad {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 45px 6% 0;
+  }
+
+  .footer-contenido {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-identidad {
+    grid-column: auto;
+  }
+
+  .footer-inferior {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* ACCESO ADMINISTRATIVO */
+
+.login-admin-section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background: #F1F1F1;
+}
+
+.login-admin-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-top: 5px solid #D71920;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+}
+
+.login-admin-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: #171717;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.login-admin-card > p {
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-admin-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-admin-card form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-admin-card label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.login-admin-card input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #171717;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-admin-card input:focus {
+  border-color: #D71920;
+}
+
+.login-admin-card .btn-primary {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.login-admin-card .btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-login-admin {
+  color: #D71920;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .login-admin-section {
+    min-height: calc(100vh - 80px);
+    padding: 35px 18px;
+  }
+
+  .login-admin-card {
+    padding: 30px 22px;
+  }
+
+  .login-admin-card h1 {
+    font-size: 22px;
+  }
+}
+
+
+/* Tabla comparativa de vehículos */
+.tabla-vehiculos-container {
+  max-width: 1100px;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+}
+
+.tabla-vehiculos-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #171717;
+}
+
+.tabla-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-vehiculos {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.tabla-vehiculos th {
+  background-color: #171717;
+  color: #FFFFFF;
+  padding: 14px 12px;
+  text-align: left;
+}
+
+.tabla-vehiculos td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #E5E5E5;
+  color: #333333;
+}
+
+.tabla-vehiculos tbody tr:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
+.tabla-vehiculos tbody tr:hover {
+  background-color: #FCE8E8;
+}
+
+/* Sección multimedia */
+.multimedia-section {
+  padding: 60px 20px;
+  background-color: #F1F1F1;
+}
+
+.multimedia-section .section-heading {
+  margin-bottom: 30px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #171717;
+}
+
+/* Encabezados principales de las secciones */
+.section-heading h2 {
+  color: #D71920;
+}
