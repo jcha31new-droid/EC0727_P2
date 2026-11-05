@@ -1,0 +1,191 @@
+
+/* ========================================
+   AUTOMARKET - PERSONALIZACIÓN DJANGO ADMIN
+   ======================================== */
+
+/* Fondo general */
+body {
+    background-color: #E5E5E5;
+}
+
+/* Encabezado principal */
+#header {
+    background-color: #171717;
+    color: #FFFFFF;
+}
+
+/* Nombre de AutoMarket */
+#site-name a {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Enlaces del encabezado */
+#header a:link,
+#header a:visited {
+    color: #FFFFFF;
+}
+
+/* Migas de pan */
+div.breadcrumbs {
+    background-color: #D71920;
+    color: #FFFFFF;
+}
+
+div.breadcrumbs a {
+    color: #FFFFFF;
+}
+
+/* Títulos de módulos */
+.module h2,
+.module caption,
+.inline-group h2 {
+    background-color: #171717;
+    color: #FFFFFF;
+}
+
+/* Enlaces generales */
+a:link,
+a:visited {
+    color: #D71920;
+}
+
+a:hover {
+    color: #A51018;
+}
+
+/* Botones principales */
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input {
+    background-color: #D71920;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.submit-row input:hover {
+    background-color: #A51018;
+}
+
+/* Botón de eliminación */
+.deletelink,
+.deletelink-box a {
+    background-color: #171717;
+    color: #FFFFFF;
+}
+
+/* Tablas */
+#result_list thead th {
+    background-color: #171717;
+    color: #FFFFFF;
+}
+
+#result_list tbody tr:nth-child(even) {
+    background-color: #F1F1F1;
+}
+
+/* Acciones seleccionadas */
+.selector-chosen h2 {
+    background-color: #D71920;
+    color: #FFFFFF;
+}
+
+/* Panel de acciones recientes */
+#content-related {
+    background-color: #F1F1F1;
+}
+
+/* Campos de formularios */
+input,
+select,
+textarea {
+    border-radius: 3px;
+}
+
+
+/* ========================================
+   AJUSTES DE IDENTIDAD AUTOMARKET
+   ======================================== */
+
+/* Barra de navegación secundaria */
+div.breadcrumbs {
+    background-color: #171717 !important;
+    color: #FFFFFF !important;
+}
+
+/* Opción activa del menú lateral */
+#nav-sidebar .current-app,
+#nav-sidebar .current-model,
+#nav-sidebar .current-model a {
+    background-color: #D71920 !important;
+    color: #FFFFFF !important;
+}
+
+/* Botón guardar de las tablas */
+#changelist-form input[type="submit"],
+#changelist-form .submit-row input,
+.submit-row input.default {
+    background-color: #D71920 !important;
+    color: #FFFFFF !important;
+    border-color: #D71920 !important;
+}
+
+/* Efecto al pasar el cursor */
+#changelist-form input[type="submit"]:hover,
+.submit-row input.default:hover {
+    background-color: #A51018 !important;
+}
+
+/* Barra de navegación secundaria */
+.breadcrumbs {
+    background-color: #171717 !important;
+    color: #FFFFFF !important;
+}
+
+.breadcrumbs a {
+    color: #FFFFFF !important;
+}
+
+
+/* Formularios de AutoMarket */
+
+/* Campos de entrada */
+.form-row input:not([type="checkbox"]):not([type="radio"]),
+.form-row select,
+.form-row textarea {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+/* Campos seleccionados */
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+    border-color: #D71920;
+    outline: 1px solid #D71920;
+}
+
+/* Botones secundarios */
+.object-tools a,
+.historylink {
+    background-color: #171717 !important;
+    color: #FFFFFF !important;
+}
+
+/* Botones de guardar */
+.submit-row input {
+    background-color: #D71920 !important;
+    color: #FFFFFF !important;
+}
+
+/* Etiquetas */
+.form-row label {
+    color: #171717;
+    font-weight: 600;
+}

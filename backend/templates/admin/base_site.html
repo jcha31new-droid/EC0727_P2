@@ -1,0 +1,18 @@
+
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}AutoMarket | Panel administrativo{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/automarket-admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            AutoMarket | Panel administrativo
+        </a>
+    </h1>
+{% endblock %}
