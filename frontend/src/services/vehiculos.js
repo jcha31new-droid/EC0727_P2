@@ -1,7 +1,8 @@
 
-const API_URL = 'http://localhost:8000/api/vehiculos/';
-const SOLICITUDES_URL = 'http://localhost:8000/api/solicitudes/';
-const CONTACTO_URL = 'http://localhost:8000/api/contacto/';
+const API_URL = 'https://ec0727p2-production.up.railway.app/api/vehiculos/';
+const SOLICITUDES_URL = 'https://ec0727p2-production.up.railway.app/api/solicitudes/';
+const CONTACTO_URL = 'https://ec0727p2-production.up.railway.app/api/contacto/';
+const AUTH_URL = 'https://ec0727p2-production.up.railway.app/api/auth/';
 
 export async function obtenerVehiculos() {
   try {
@@ -80,8 +81,6 @@ export async function registrarMensajeContacto(datos) {
     throw error;
   }
 }
-
-const AUTH_URL = 'http://localhost:8000/api/auth/';
 
 export async function obtenerCSRF() {
   const respuesta = await fetch(`${AUTH_URL}csrf/`, {
