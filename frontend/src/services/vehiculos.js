@@ -3,6 +3,7 @@ const API_URL = 'https://ec0727p2-production.up.railway.app/api/vehiculos/';
 const SOLICITUDES_URL = 'https://ec0727p2-production.up.railway.app/api/solicitudes/';
 const CONTACTO_URL = 'https://ec0727p2-production.up.railway.app/api/contacto/';
 const AUTH_URL = 'https://ec0727p2-production.up.railway.app/api/auth/';
+let csrfToken = null;
 
 export async function obtenerVehiculos() {
   try {
@@ -91,21 +92,23 @@ export async function obtenerCSRF() {
     throw new Error('No fue posible obtener el token CSRF');
   }
 
+  const datos = await respuesta.json();
+  csrfToken = datos.csrfToken;
+
   return true;
 }
 
 export async function iniciarSesion(datos) {
-  const token = document.cookie
-    .split('; ')
-    .find(fila => fila.startsWith('csrftoken='))
-    ?.split('=')[1];
+  if (!csrfToken) {
+    await obtenerCSRF();
+  }
 
   const respuesta = await fetch(`${AUTH_URL}login/`, {
     method: 'POST',
     credentials: 'include',
     headers: {
       'Content-Type': 'application/json',
-      'X-CSRFToken': token
+      'X-CSRFToken': csrfToken
     },
     body: JSON.stringify(datos)
   });
@@ -119,17 +122,15 @@ export async function iniciarSesion(datos) {
   return resultado;
 }
 
+
 export async function cerrarSesion() {
-  const token = document.cookie
-    .split('; ')
-    .find(fila => fila.startsWith('csrftoken='))
-    ?.split('=')[1];
+  await obtenerCSRF();
 
   const respuesta = await fetch(`${AUTH_URL}logout/`, {
     method: 'POST',
     credentials: 'include',
     headers: {
-      'X-CSRFToken': token
+      'X-CSRFToken': csrfToken
     }
   });
 

@@ -5,11 +5,14 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.decorators.http import require_POST
 from django.contrib.auth import authenticate, login, logout
-
+from django.middleware.csrf import get_token
 
 @ensure_csrf_cookie
 def obtener_csrf(request):
-    return JsonResponse({'mensaje': 'Token CSRF generado'})
+    return JsonResponse({
+        'mensaje': 'Token CSRF generado',
+        'csrfToken': get_token(request)
+    })
 
 
 @require_POST
@@ -58,4 +61,4 @@ def cerrar_sesion(request):
 
 def cerrar_sesion_admin(request):
     logout(request)
-    return redirect('http://localhost:5173/')
+    return redirect('https://automarket-ec0727.netlify.app/')
