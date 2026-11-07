@@ -219,6 +219,7 @@
       <a href="#comparativa" onClick={volverCatalogo}>Comparativa</a>
       <a href="#nosotros" onClick={volverCatalogo}>Nosotros</a>
       <a href="#contacto" onClick={volverCatalogo}>Contacto</a>
+      <a href="#" onClick={abrirLoginAdmin}>Acceso administrativo</a>
     </nav>
     )}
   </header>
@@ -833,14 +834,6 @@
 
           <div className="footer-inferior">
             <p>© 2026 AutoMarket. Todos los derechos reservados.</p>
-
-            <a
-              href="#"
-              className="footer-admin"
-              onClick={abrirLoginAdmin}
-            >
-            Acceso administrativo
-            </a>
           </div>
 
         </footer>
